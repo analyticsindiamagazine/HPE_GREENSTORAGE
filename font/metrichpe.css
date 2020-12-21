@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family:'MetricHPE-Light';
+	src: url('MetricHPE-Light_gdi.eot');
+	src: url('MetricHPE-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('MetricHPE-Light_gdi.woff') format('woff'),
+		url('MetricHPE-Light_gdi.ttf') format('truetype'),
+		url('MetricHPE-Light_gdi.svg#MetricHPE-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-00FE;
+}
+@font-face {
+	font-family:'MetricHPE-Semibold';
+	src: url('MetricHPE-Semibold_gdi.eot');
+	src: url('MetricHPE-Semibold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('MetricHPE-Semibold_gdi.woff') format('woff'),
+		url('MetricHPE-Semibold_gdi.ttf') format('truetype'),
+		url('MetricHPE-Semibold_gdi.svg#MetricHPE-Semibold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-00FE;
+}

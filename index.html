@@ -1,0 +1,1031 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+      <head>
+      <title>HPE | Vintech  | GreenLake  | Digital Campaign</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link  rel="stylesheet" href="css/bootstrap.min.css">
+      <link  rel="stylesheet" href="css/main.css">
+      <link  rel="stylesheet" href="css/videopopup.css">
+      <link  rel="stylesheet" href="font/font-awesome.css">
+      <link  rel="stylesheet" href="font/metrichpe.css">
+      
+      <link  rel="stylesheet" href="css/scroll.css">
+            
+<script src="scroll/scroll.js"></script>
+<script src="scroll/scroll2.js"></script>
+
+
+      <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/placeholder.js"></script>
+      <![endif]-->
+      <script src="js/jquery-latest.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.validation.js"></script>
+      
+      
+                   
+   <script type="text/javascript">
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+
+
+
+
+
+        // function blockSpecialChar(e){
+        //               var k=0;
+        //               document.all ? k = e.keyCode : k = e.which;
+        //               return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+        //               }
+
+
+
+
+
+
+
+
+        function validateform() {
+
+
+//
+
+
+            var k = 0;
+
+            var companyName = $("#company_name").val();
+
+			
+			
+			// Name 
+            var name = $("#first_name").val();
+            var regex = new RegExp("^[a-zA-Z ]+$");
+            var sChar = new RegExp("[^\s]");
+            var nametest = ["aaa", "bb", "cc", "dd", "xyz", "test"];
+
+
+
+
+
+
+
+            if ($("#first_name").val() == "") // only add if not added
+            {
+                $("label[for='myalue']").html("User Name is required");
+                $("#first_name").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+
+
+            }
+
+                /*  else if(sChar.test(name) == false){
+					   $("#first_name").css({border:"1px  solid red", background:"rgba(255,204,204, 0.8)",color:"#000"});
+					  k=1;
+				  }*/
+
+
+
+
+
+            else if (name == nametest) {
+                $("label[for='myalue']").html("User Name not valid");
+                $("#first_name").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+
+            }
+
+
+
+            else if (name.length <= 2) {
+                $("label[for='myalue']").html("User Name not valid");
+                $("#first_name").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+            }
+
+
+
+
+
+
+
+
+            else if (regex.test(name) == false) {
+                $("label[for='myalue']").html("User Name not valid");
+                $("#first_name").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+
+            }
+
+
+            else {
+                $("label[for='myalue']").html("");
+                $("#first_name").css({ border: "1px solid #4cae4c", background: "rgba(255,255,255, 0.8)", color: "#000" });
+            }
+
+
+
+			
+			
+			
+			
+			
+			// Mobile Number
+
+            var mobNumber = $('#mobile_no').val();
+            var mobilepattern = new RegExp(/^\d{10}$/);
+
+
+
+            if ($("#mobile_no").val() == "") // only add if not added
+            {
+                $("label[for='myalue6']").html("Phone number is required");
+                $("#mobile_no").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+
+            }
+
+
+
+            else if (mobilepattern.test(mobNumber) == false) {
+                $("label[for='myalue6']").html("Phone number is required");
+                $("#mobile_no").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+
+            }
+
+
+            else {
+                $("label[for='myalue6']").html("");
+                $("#mobile_no").css({ border: "1px solid #4cae4c", background: "rgba(255,255,255, 0.8)", color: "#000" });
+            }
+
+
+			
+			
+			
+			
+			
+			// Email id
+			
+			
+			
+			
+
+            if ($("#email").val() == "") // only add if not added
+            {
+                $("label[for='myalue7']").html("E-mail is required");
+                $("#email").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+
+            }
+            else {
+
+                $("label[for='myalue7']").html("");
+                $("#email").css({ border: "1px solid #4cae4c", background: "rgba(255,255,255, 0.8)", color: "#000" });
+            }
+
+
+
+
+			// Company Name
+
+
+            if ($("#company_name").val() == "") // only add if not added
+            {
+                $("label[for='myalue2']").html("Company name is required");
+                $("#company_name").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+
+            }
+
+
+
+
+
+            else if (companyName.length <= 2) {
+                $("label[for='myalue2']").html("Company name is required");
+                $("#company_name").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                k = 1;
+            }
+
+
+
+			
+	/*		else if(/^[\d]+$/.test( $("#company_name").val() ) ||  /^[A-Za-z\d\s]+$/.test( $("#company_name").val() )==false ) {
+            $("label[for='myalue2']").html("Invalid Company name");
+            $("#company_name").css({ border: "1px dotted rgba(255, 0, 0, 1)" });
+            k = 1;
+
+}
+			*/
+			
+			
+			else if(/^[\d]+$/.test( $("#company_name").val() ) ) {
+            $("label[for='myalue2']").html("Invalid Company name");
+            $("#company_name").css({ border: "1px dotted rgba(255, 0, 0, 1)" });
+            k = 1;}
+
+			
+
+
+            else {
+                $("label[for='myalue2']").html("");
+                $("#company_name").css({ border: "1px solid #4cae4c", background: "rgba(255,255,255, 0.8)", color: "#000" });
+            }
+
+
+
+
+
+
+            if (k == 1) { return false; }
+            else {
+                return true;
+            }
+        }
+
+
+
+
+        function validateEmail() {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var controlId = document.getElementById("email");
+
+            if (reg.test(controlId.value) == false) {
+
+
+                return false;
+            }
+
+            else {
+                return true;
+            }
+
+        }
+
+
+
+
+
+
+
+        function nameChck() {
+            var nameValue = $("#first_name").val();
+
+            if (nameValue == "abc") {
+                return false;
+            }
+            else if (nameValue == "xyz") {
+                return false;
+            }
+
+            else {
+                return true;
+            }
+        }
+
+
+
+
+        function textchck() {
+            var textValue = $("#company_name").val();
+
+            if (textValue == "abc") {
+                return false;
+            }
+            else if (textValue == "xyz") {
+                return false;
+            }
+
+            else {
+                return true;
+            }
+
+        }
+
+
+
+function validateEmail() {
+var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	
+var emailLegalReg = /^([\w-\.]+@(?!gmail.com)(?!gmail.com)(?!gmail.cum)(?!geemail.com)(?!Gmail.com)(?!gmil.com)(?!gmai.com)(?!gmeil.com)(?!gemil.com)(?!gmil.com)(?!gimal.com)(?!gmail.co)(?!gaaail.com)(?!gmail.Com)(?!gimal.com)(?!gmail.cim)(?!gemal.come)(?!gamil.com)(?!gemli.com)(?!gimal.com)(?!g-mail.com)(?!gimell.com)(?!gimal.com)(?!gamil.com)(?!gimail.com)(?!gemli.com)(?!yahoo.co.in)(?!mail.com)(?!7gmail.com)(?!GMAIL.COM)(?!gamil.comk)(?!gmail.con)(?!giml.com)(?!gmaill.com)(?!gmali.com)(?!8958274701gmali.com)(?!87gamil.com)(?!yahoo.com)(?!hotmail.com)(?!aol.com)(?!REDIFFMAIL.COM)(?!rediffmail.com)([\w-]+\.)+[\w-]{2,4})?$/;
+	
+var controlId = document.getElementById("email");
+var emailaddressVal = $("#email").val();
+if (reg.test(controlId.value) == false) {
+
+
+                return false;
+            }
+            else if (emailLegalReg.test(emailaddressVal) == false) {
+                return false;
+            }
+
+            else {
+                return true;
+            }
+
+        }
+
+
+
+
+
+
+
+        function PhonenoValidation() {
+            var controlId = document.getElementById("mobile_no");
+            userid = controlId.value;
+            var phoneno = /^\d{10}$/;
+
+
+            var mobileArr = ['8888888888', '9999999999', '000000000', '1111111111', '22222222222', '3333333333', '4444444444', '5555555555', '6666666666', '7777777777', '0000000000']
+            var Ismobilevalid = 0;
+            for (i = 0; i < mobileArr.length; i++) {
+
+                if (userid == mobileArr[i]) {
+
+                    Ismobilevalid = 1;
+
+                }
+            }
+
+
+
+
+            if (userid.length != 10) {
+                return false;
+                // return ("PhoneNo should be only in digits" + "\n");
+            }
+            else if (Ismobilevalid == 1) {
+                return false;
+            }
+
+            else {
+                return true;
+            }
+        }
+
+
+
+
+
+
+
+
+        function GeneralPost() {
+            var firstname = $('#first_name').val();
+            var lastname = $('#last_name').val();
+            var designation = $('#Designation').val();
+            var companyname = $('#company_name').val();
+            var mobileno = $('#mobile_no').val();
+            var email = $('#email').val();
+            var address = $('#address').val();
+            var city = $('#city').val();
+            var Jobtitle = $('#Job_Title').val();
+            var State = $('#State').val();
+            var Industry = $('#Industry').val();
+            var exampleindustry = $('#exampleindustry').val();
+            var typeofbusiness = $('#typeofbusiness').val();
+
+
+			  var campaignName = "HPE | Vintech | GreenLake | December 14 2020";
+
+            var Usource = getParameterByName('utm_source');
+            var Umedium = getParameterByName('utm_medium');
+
+
+
+
+            //alert(firstname);
+            if (validateform() == true) {
+
+
+
+
+                if (nameChck() == true) {
+                    if (PhonenoValidation() == true) {
+
+
+                        if (validateEmail() == true) {
+                            if (textchck() == true) {
+
+
+                                var dataJSON = { "FullName": firstname, "PhoneNo": mobileno, "EmailId": email, "Company": companyname, "Source": "", "filler1": campaignName, "filler2": lastname, "filler3": designation, "filler4": address, "filler5": city, "filler6": typeofbusiness, "filler7": Jobtitle, "filler8": State, "filler9": Industry, "filler10": "", "filler11": "", "filler12": "", "filler13": "", "filler14": Usource, "filler15": Umedium };
+                                //  alert(JSON.stringify(dataJSON));
+                                $.ajax({
+                                    type: "POST",
+                                    url: 'http://majorelevents.in/DataServicePage/default.aspx?Json=' + JSON.stringify(dataJSON),
+                                    // data: JSON.stringify(dataJSON),
+                                    // contentType: "application/json; charset=utf-8",
+                                    //dataType: "json",
+                                    // processData: true,
+                                    // crossDomain: true,
+                                    async: false,
+                                    success: function (data) {
+                                        // alert(data);
+                                        window.location = "thankyou.html";
+
+
+
+                                    }
+                                });
+
+
+                            } else {
+                                $("label[for='myalue2']").html("Invalid Company");
+                                $('#company_name').focus();
+                                return false;
+                            }
+
+
+
+
+
+                        } else {
+                            $("label[for='myalue7']").html("Invalid E-mail address");
+							$("#email").css({ border: "1px  solid red", background: "rgba(255,204,204, 0.8)", color: "#000" });
+                           	$('.align').css({color:"#ff8b31"});
+							// $('#email').focus();
+                            return false;
+                        }
+
+
+
+
+
+                    } else {
+                        $("label[for='myalue6']").html("Invalid Mobile number");
+                        $('#mobile_no').focus();
+                        return false;
+                    }
+
+
+
+                } else {
+                    $("label[for='myalue']").html("Invalid Name");
+                    $('#first_name').focus();
+                    return false;
+               }
+
+
+            }
+
+
+                return false;
+        }
+
+
+    </script>
+
+
+      </head>
+      <body>
+      <div class="mainTitle" >Smooth scrolling to page top and bottom using jQuery </div>
+       <div class="scrollTop"> <img src="images/top.png" alt="top-button" width="144" height="47" title="Scroll to top"> </div>
+       
+       <!-- Fixed navbar -->
+    
+      
+<div class="container-fluid" id="Request-a-quote">
+       <header id="main_header">
+            <div class="bootom-header-bar navbar-fixed-top">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 text-left "> <a href="javascript:void(0);" class="logo"><img src="images/hpe-logo.jpg"></a> </div>
+                     <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6 text-right logomtp"> <a href="javascript:void(0);"><img src="images/vintech.jpg" alt="Orbit" title="Orbit"/></a> </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+
+
+
+        
+           
+                 <section class="bg-2">
+    <div class="row">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12 clearfix">
+            <div class="box-white">
+        <h1 class="mtop headbanner leftcon">HPE GREENLAKE FOR STORAGE</h1>
+        <p  class="bannertest hedpar leftcon">
+Deliver business outcomes faster and unlock the full potential of your data with cloud services for storage, optimized for all your workloads.
+
+
+</p>
+       </div>
+      </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-space ">
+        <div class="form-bg">
+                <h1>Wish to know more about HPE InfoSight?</h1>
+                <h3>Ask our expert.</h3>
+                <form onsubmit="return validateform();" method="post" action="">
+            <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" placeholder="" id="first_name" name="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = ''" onkeypress="return blockSpecialChar(event)" class="form-control">
+                    <label class="font-label" style="color:#fff; font-family: arial;" for="myalue"></label>
+                  </div>
+            <div class="form-group">
+                    <label for="mail">E-mail *</label>
+                    <input type="text" placeholder="" id="email" name="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = ''" class="form-control">
+                   <div class="row">
+                     <label class="font-label col-md-6" style="color:#fff; font-family: arial;" for="myalue7"></label>
+                    <div class="align col-md-6">Please enter your company email ID</div>
+                 </div>
+                   </div>
+            <div class="form-group">
+                    <label for="Phone">Phone *</label>
+                    <input type="text" placeholder="" id="mobile_no" name="Mobile No" maxlength="10" onfocus="this.placeholder = ''" onblur="this.placeholder = ''" class="form-control">
+                    <label class="font-label" style="color:#fff; font-family: arial;" for="myalue6"></label>
+                  </div>
+            <div class="form-group">
+                    <label for="company">Company  *</label>
+                    <input type="text" placeholder="" onkeypress="return" id="company_name" name="Company name" onfocus="this.placeholder = ''" onblur="this.placeholder = ''" class="form-control">
+                    <label class="font-label" style="color:#fff; font-family: arial; line-height: 19px; margin-bottom: 10px;" for="myalue2"></label>
+                  </div>
+            <div class="form-group text-center">
+                    <input type="submit" value="Submit" onclick="return GeneralPost();" name="Submit" class="btn btn-success button-form">
+                  </div>
+          </form>
+              </div>
+      </div>
+          </div>
+    <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-bottom: 1px solid #e3e3e3" data-spy="affix" data-offset-top="100">
+        <div class="navtar">
+                <ul class="PrimaryNav with-indicator">
+            <li><a class="overview menu-item active" href="#overview">Overview</a></li>
+            <li><a class="Offerings" href="#Offerings"> Offerings</a></li>
+			<li><a class="Resources" href="#Resources">  Resources</a></li>	
+          </ul>
+              </div>
+      </div>
+		
+		
+	
+		<div class="lwork" id="overview">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mtop3 container-fluid">
+		<h1 class="text-center head clearfix">INTELLIGENT STORAGE TO ACCELERATE YOUR BUSINESS</h1>
+			<div class="aroow-1"></div>
+		<p class="text-center pragr clearfix">Data is one of your business’s most valuable assets, fueling innovation and powering informed decisions. Data needs to be always-on, always-fast, automated, protected and available on-demand. But as your business advances, complexities arise. You need a simple way to transform from IT operator to service provider for your business – so you can focus more on innovation and less on administration - and help your business get more value from their data – wherever it resides.</p>
+		</div>
+		</div>
+
+		
+          </div>
+  </section>
+       
+       
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<img src="images/5.jpg" alt="Data protection and disaster recovery" title="Data protection and disaster recovery" class="img-responsive"/>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<h1 class="head4 text-left">Get the HPE GreenLake experience</h1>
+<p class="pragr4 text-left">Storage infrastructure with the performance, scale, agility and efficiency your business needs can be yours in days with HPE GreenLake, offering a set of workload-optimized, consumption-based solutions built on an intelligent data platform and delivered to you entirely as a service. Built-in buffer capacity eliminates the risk of overprovisioning by ensuring you’ll be able to handle any unexpected demand, and HPE will work with you to add resources as needed before your business needs additional capacity. With HPE, your data works for you, rather than the other way around.
+</p>
+  <!-- popup 2 -->
+<ul class="bullet">
+<li><a href="pdf/a00067350enw.pdf" target="_blank">View the infographic</a> </li>
+</ul>
+<!-- popup 2 end -->
+</div>
+</div>
+</div>
+	
+	<div class="gap-1new"></div>
+	
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxsmall">
+<h1 class="head4 text-left">Faster time to value</h1>
+<p class="pragr4 text-left">Get the industry-leading storage you need faster, with ready-to-ship configurations for mission-critical, business-critical, general-purpose, and data protection needs. Eliminate the long procurement cycles and upfront capital costs that can slow your business down. </p>
+<!-- popup 2 -->
+<ul class="bullet">
+<!--<li><a href="#" target="_blank"></a> </li> -->
+</ul>
+<!-- popup 2 end -->
+</div>
+
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxsmall">
+<h1 class="head4 text-left">Scale on demand</h1>
+<p class="pragr4 text-left">Get additional capacity in minutes, not months, as you eliminate over-provisioning expense and under-provisioning risk. Your deployment includes a capacity buffer for any unexpected increases in demand, and we work with you to deliver the added capacity as needed.</p>
+<!-- popup 3 -->
+<ul class="bullet">
+<!--<li><a href="#" target="_blank"></a> </li> -->
+</ul>
+<!-- popup 3 end -->
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxsmall">
+<h1 class="head4 text-left">Pay for what you use <sup style="font-weight: normal; font-size: 14px;">1</sup></h1>
+<p class="pragr4 text-left">Gain simplicity and financial clarity while avoiding upfront capital costs for storage with variable monthly payments based on actual metered usage above your reserve capacity. Transparently view your usage at any time in HPE GreenLake Central.</p>
+<!-- popup 4 -->
+<ul class="bullet">
+<!--<li><a href="#" target="_blank"></a> </li> -->
+</ul>
+<!-- popup 4 end -->
+</div>
+	
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxsmall">
+<h1 class="head4 text-left">Free up IT resources</h1>
+<p class="pragr4 text-left">Your IT team cannot deliver their highest value if they are tied up with routine tasks. Your storage is managed for you by HPE experts to allow your IT team to better support strategic business initiatives.</p>
+<!-- popup 4 -->
+<ul class="bullet">
+<!--<li><a href="#" target="_blank"></a> </li> -->
+</ul>
+<!-- popup 4 end -->
+</div>
+	
+	
+	
+</div>
+</div>
+
+	
+	
+	
+	
+	<div 
+	
+	
+	
+	
+       
+       
+      <section class="sectiontab clearbot">
+
+		  
+		  
+
+	
+
+	
+	
+	
+
+<div class="bg-gay-3" id="Offerings">		
+<div class="container">
+<div class="row">
+	<h1 class="text-center head clearfix">MISSION-CRITICAL REDEFINED: HPE PRIMERA </h1>
+	<div class="aroow-4"></div>
+		<p class="text-center pragr clearfix">The world’s most intelligent storage for mission-critical apps<sup>2</sup> combines autonomous operations with extreme resiliency and performance.</p>
+
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+<p class="title"><strong>100</strong> <span style="color:#01A982"><strong>%</strong> </span></p>
+<div class="persent"><strong>guaranteed availability</strong></div>
+<div class="persent">Power your mission-critical apps</div>
+</div>
+	
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+<p class="title"><strong>93</strong> <span style="color:#01A982"><strong>%</strong> </span></p>
+<div class="persent"><strong>time savings</strong></div>
+<div class="persent">Experience autonomous, on-demand IT</div>
+</div>
+	
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+<p class="title"><strong>20</strong> <span style="color:#01A982"><strong>mins</strong> </span></p>
+<div class="persent"><strong>from rack to apps</strong></div>
+<div class="persent">And provision in seconds</div>
+</div>
+
+	
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"></div>	
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+<ul class="bullet-2">
+<li><a href="pdf/a00074524enw.pdf" target="_blank">Download the Analyst Report </a> </li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"></div>
+	
+</div>
+</div>
+</div>
+	
+	
+
+	
+	
+	
+<div class="container">
+	
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mtop3 container-fluid"  >
+<h1 class="text-center head clearfix">WHY CONSUMPTION-BASED HIGH-PERFORMANCE STORAGE?</h1>
+<div class="aroow-6"></div>
+</div>
+	
+<div class="row">
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxsmall">
+<h1 class="head4 text-left">Rapid deployment, with scalability on demand </h1>
+<p class="pragr4 text-left">Preconfigured options enable delivery in as little as 14 days, with scalability as business needs grow.</p>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxsmall">
+<h1 class="head4 text-left">Managed for you</h1>
+<p class="pragr4 text-left">HPE delivers, maintains, and owns your storage infrastructure, and manages your capacity. And you have the option of adding full management services for a complete turnkey experience.</p>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxsmall">
+<h1 class="head4 text-left">No overprovisioning risk</h1>
+<p class="pragr4 text-left">Your HPE GreenLake deployment is designed to meet your current needs—with built-in buffer capacity to address any unexpected spikes in demand.</p>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 boxsmall">
+<h1 class="head4 text-left">Real-time cost visibility</h1>
+<p class="pragr4 text-left">Get near-real time insight into your consumption and costs with the HPE GreenLake Central platform.</p>
+</div>
+
+</div>
+</div>
+	
+	
+	
+	
+	
+	<div class="bg-gay">		
+<div class="container">
+<div class="row">
+	<h1 class="text-center head clearfix">WATCH THE VIDEO</h1>
+	<div class="aroow-4"></div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<p class="pragr4 text-left">Now is the time for intelligent storage that manages itself for every mission-critical app of today and tomorrow. It's time for HPE Primera so you can unlock the agility of the cloud, and innovate without compromise. Watch the short video to learn more about HPE PRIMERA.</p>
+</div>
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<figure><a href="javascript:void(0)" id="video2"><img src="images/video-2.jpg"  alt="" class="img-responsive" /></a></figure>
+</div>
+</div>
+</div>
+</div>
+	
+	
+       
+	
+	
+<div class="container" id="Resources">
+	
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mtop3 container-fluid"  >
+		<h1 class="text-center head clearfix">FEATURED RESOURCES</h1>
+			<div class="aroow-1"></div>
+		<p class="text-center pragr clearfix">Looking to dive deeper? Here are some additional resources that might interest you.</p>
+		</div>
+	
+	
+<div class="row">
+	
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 boxsmall">
+<img src="images/8.jpg"  alt="" class="img-responsive" />
+<h1 class="head4 text-left">Take the intelligent route with consumption-based storage</h1>
+<p class="pragr4 text-left">Drive your business smarter with AI-driven HPE storage and the consumption-based economics of HPE GreenLake to get the agility of cloud with the control of an on-premises solution.
+</p>
+  <!-- popup 2 -->
+<ul class="bullet">
+<li><a href="pdf/a00067350enw-1.pdf" target="_blank">View the infographic</a> </li>
+</ul>
+<!-- popup 2 end -->
+</div>
+
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 boxsmall">
+<img src="images/9.jpg"  alt="" class="img-responsive" />
+<h1 class="head4 text-left">The power of consumption-based on-premises services in meeting dynamic storage demands</h1>
+<p class="pragr4 text-left">This research brief covers the findings of a recent executive pulse study on consumption-based IT, specifically cloud and storage.
+</p>
+  <!-- popup 2 -->
+<ul class="bullet">
+<li><a href="pdf/a00079768enw.pdf" target="_blank">View the brief</a> </li>
+</ul>
+<!-- popup 2 end -->
+</div>
+
+
+	
+	
+</div>
+</div>
+	
+	
+	
+
+		  
+
+		  
+  </section>
+	
+      </div>
+		  
+		  
+		  
+		  
+
+
+
+		  
+		  
+		  
+		  
+		  
+	
+		  
+		  
+		  
+		  
+		  <div class="gap-2new"></div>
+		  <BR>
+		  
+			 <div class="container">
+           <div class="row">
+			<div class="lwork">
+			  <div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="footer-list">
+				  <ul>
+					<li><span class="note"><sup>1</sup></span> Reserve may apply </li>
+					
+					</ul>
+				  </div>
+				</div>
+			</div>
+		  </div>
+		  </div>
+			  
+			  
+			<div class="container">
+			<div class="row">
+			<div class="lwork">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="footer-list">
+			<ul>
+			<li><span class="note"><sup>2</sup></span> HPE Storage <a href="pdf/a00058506enw.pdf" target="_blank">Substantiation</a> </li>
+
+			</ul>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+		  
+		  <div class="gap-2new"></div>
+		  
+		  
+	
+      
+<footer class="footer">
+        <div class="container">
+           <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+          
+            
+      </div></div>
+           
+           <div class="col-sm-12 col-md-12 col-lg-12">
+         	
+         <p class="color-1">© Copyright 2020 Hewlett Packard Enterprise Development LP.</p> 
+      </div>
+
+  </div>
+      </footer>
+      
+      
+      <script type="text/javascript">
+            $(document).ready(function() {
+
+                // the top section of page
+                var topPart = $('.mainTitle');
+                // the position of the top part
+                var pos = topPart.offset();
+
+                // if user scrolls down the page then make the
+                // scroll to top icon visible else hide it
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > pos.top + topPart.height()) {
+                        $('.scrollTop').show();
+                    } else if ($(this).scrollTop() <= pos.top) {
+                        $('.scrollTop').hide();
+                    }
+                });
+                
+                // Binding event for user if they clicks on scroll to up icon
+                $('.scrollTop').click(function() {
+                    $("html, body").animate({scrollTop: 0});
+                });
+                
+                // Binding event for user if they clicks on scroll to bottom icon
+                $('.scrollBottom').click(function() {
+                    var windowHeight = $(window).height();
+                    var scrollHeight = $('body')[0].scrollHeight;
+                    $("html, body").stop().animate({scrollTop: scrollHeight - windowHeight});
+                });
+                
+                // Binding event for user if they clicks on scroll to middle icon
+                $('.scrollMidsection').click(function() {
+                    $("html, body").stop().animate({scrollTop:$('.midsection').offset().top});
+                });
+            });
+        </script>
+      
+      
+<!-- Tab slider javascript start -->    
+<script>
+$(document).ready(function() {
+$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+e.preventDefault();
+$(this).siblings('a.active').removeClass("active");
+$(this).addClass("active");
+var index = $(this).index();
+$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+$("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+});
+});
+</script>
+
+<!-- Tab slider javascript end here --> 
+      
+      
+<script src="js/custome.js"></script> 
+<script src="js/videopopup.js"></script> 
+<script type="text/javascript" src="js/YouTubePopUp.jquery.js"></script> 
+<!--   <script>
+         window.addEventListener('focus', function() {
+          $('#myvideo').get(0).pause();
+         });
+         
+         window.addEventListener('blur', function() {
+           $('#myvideo').get(0).play();
+         });
+      </script>
+      -->
+	   <div id="vidBox">
+         <div id="videCont">
+            <video  id="v1" loop controls>
+               <source src="video/HPE-InfoSight.mp4" type="video/mp4">
+               <source src="video/HPE-InfoSight.mp4" type="video/ogg">
+            </video>
+         </div>
+      </div>
+
+	  
+
+   <div id="vidBox2">
+        <div id="videCont2">
+            <video id="v2" loop controls>
+                <source src="video/HPE-PRIMERA.mp4" type="video/mp4">
+                <source src="video/HPE-PRIMERA.mp4" type="video/ogg">
+            </video>
+        </div>
+    </div>
+	
+	
+	    <div id="vidBox3">
+        <div id="videCont3">
+            <video id="v3" loop controls>
+                <source src="video/HPE-Introducing-Intelligent-HCI.mp4" type="video/mp4">
+                <source src="video/HPE-Introducing-Intelligent-HCI.mp4" type="video/ogg">
+            </video>
+        </div>
+    </div>
+	
+	
+	
+	<div id="vidBox4">
+	<div id="videCont4">
+	<video id="v4" loop controls>
+		<source src="video/HPE-SimpliVity.mp4" type="video/mp4">
+		<source src="video/HPE-SimpliVity.mp4" type="video/ogg">
+	</video>
+	</div>
+	</div>
+	  
+	
+
+
+
+	  
+<script type="text/javascript">
+         function ShowHideDiv() {
+             var ddlPassport = document.getElementById("Job_Title");
+             var dvPassport = document.getElementById("isOther");
+             var dvPassportindustry = document.getElementById("exampleindustry");
+             dvPassport.style.display = ddlPassport.value == "Others" ? "block" : "none";
+         }
+      </script>
+      
+	  
+
+</body>
+</html>
